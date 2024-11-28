@@ -18,7 +18,7 @@ var BINPrefselector = ( function () {
 
   //function to obtain fallback url in case a pdf is loaded
   function getFallbackURL(url) {
-    return (url.search(/.*\.pdf[\s]*$/i) != -1 && url.search(/\/pdf\//i) != -1) ?  url.replace(/\/pdf\//i,"/abs/") : null;
+    return (url.search(/\/pdf\//i) != -1) ?  url.replace(/\/pdf\//i,"/abs/") : null;
   }
 
 	// finally expose selector message and link formatter
